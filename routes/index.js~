@@ -1,0 +1,22 @@
+
+/*
+ * GET home page.
+ */
+
+exports.index = function(req, res){
+  res.render('index', { title: 'YangYuzhong' });
+};
+exports.reg = function(req,res){
+  res.render('reg',{
+    title:'注册',
+  
+  });
+};
+exports.doreg = function(req,res){
+  if (req.body['pwdone'] != req.body['pwdtwo']) {
+      //req.flash('error', '两次输入的口令不一致');
+      req.session.error='两次输入的口令不一致';
+      return res.redirect('/reg');
+  }
+      res.redirect('/reg');
+};

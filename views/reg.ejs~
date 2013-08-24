@@ -1,0 +1,32 @@
+<%-include header %>
+  <div>
+    <div>
+      <a href="/">首页</a>
+      <a href="">登录</a>
+    </div>
+  </div>
+  <div>
+    <div>
+      <form method="post">
+        <div>
+          <label for="user">用户名：</label>
+          <input type="text" name="user" id="user" />
+        </div>
+	    <div>
+          <label for="pwdone">密码：</label>
+          <input type="text" name="pwdone" id="pwdone" />
+        </div>
+	    <div>
+          <label for="pwdtwo">密码（确认）：</label>
+          <input type="password" name="pwdtwo" id="pwdtwo" />
+        </div>
+
+
+
+	    <div>
+	      <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+<%-include tailer %>
